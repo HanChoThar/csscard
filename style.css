@@ -1,0 +1,132 @@
+:root{
+  --darkblue: hsl(223, 47%, 23%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --pale-blue: hsl(225, 100%, 98%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --primary-blue: hsl(225, 100%, 94%);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 120vh;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url('images/pattern-background-desktop.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  body{
+    background-image: url('images/pattern-background-mobile.svg');
+    height: 100vh;
+  }
+}
+
+.main .hero {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;  
+}
+
+.main .content{
+  background-color: white;
+  padding: 2rem;
+}
+
+.content .heading{
+  text-align: center;
+  color: var(--darkblue);
+  /* margin-bottom: 0.5rem; */
+}
+
+.content > p {
+  text-align: center;
+  color: var(--desaturated-blue);
+  margin: 2rem 0rem;
+}
+
+.plan {
+  background-color: var(--pale-blue);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.plan > .first {
+  display: flex;
+  align-items: center;
+}
+
+.second>a:hover{
+  color: var(--darkblue);
+  transition: 0.3s ease-in;
+}
+
+.music{
+  margin-right: 1rem;
+}
+
+.price > h4{
+  color: var(--darkblue);
+}
+.price > p {
+  color: var(--desaturated-blue);
+}
+
+.btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bright-blue);
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 2rem 0rem;
+  width: 100%;
+  box-shadow: 1px 20px 13px 0px rgba(224,232,255,0.59);
+-webkit-box-shadow: 1px 20px 13px 0px rgba(224,232,255,0.59);
+-moz-box-shadow: 1px 20px 13px 0px rgba(224,232,255,0.59);
+}
+
+.btn:hover{
+  background-color: var(--darkblue);
+  transition: 0.3s ease-in;
+  box-shadow: 1px 20px 13px 0px rgba(31,47,86,0.45);
+-webkit-box-shadow: 1px 20px 13px 0px rgba(31,47,86,0.45);
+-moz-box-shadow: 1px 20px 13px 0px rgba(31,47,86,0.45);
+}
+
+.cancel{
+  text-align: center;
+  color: var(--desaturated-blue);
+  cursor: pointer;
+}
+
